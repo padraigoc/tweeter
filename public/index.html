@@ -11,14 +11,18 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
 
     <!-- App CSS -->
+    
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
+
   </head>
 
   <body>
@@ -30,15 +34,53 @@
     </nav>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main>
+
+        <div class="composecontainer">
         <section class="new-tweet">
             <h2>Compose Tweet</h2>
-            <form method="POST" action="#">
-              <textarea name="text" placeholder="What are you humming about?"></textarea>
+            <hr>
+            <form method="POST" action="/tweets">
+              <!-- Ids are for selecting elements, class are for styling  -->
+              <textarea class="tweet-text" id="tweet_textarea" name="text" placeholder="What are you humming about?"></textarea>
               <input type="submit" value="Tweet">
-              <span class="counter">140</span>
+              <span id="counter">140</span>
             </form>
           </section>
+        </div>
+
+        <br>
+
+        <div class="tweetcontainer">
+          <article>
+              <header>
+                  <img id="avatar" src="/images/avatar.png">
+
+                  <div id="name">Patrick O'Connor
+
+                  <span style="float:right; font-size: 15px; font-weight: normal; padding-top: 10px; margin-right: 10px;"> @patrick </span>
+                
+                  </div>
+                            
+                <br> 
+                <br>
+                <br>
+             
+              </header>
+              <p>
+              My tweet goes here
+              </p>
+
+              <footer>
+                <p>10 days ago</p>
+                  
+              </footer>
+
+          </article>
+
+
+        </div>
+
     </main>
 
   </body>

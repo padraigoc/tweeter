@@ -20,19 +20,119 @@ html {
 
 body {
   margin: 0;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   color: #244751;
   background-color: #eee;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+/* class */
 main {
   margin: auto;
-  width: 450px;
-  border: 3px solid green;
-  padding: 10px;
-  background-color: white:
+  padding-top: 120px;
+  margin-top: 0;
+  background-color: white;
+  width: 40%;
+  height: 1000px;
 }
+
+/*class*/
+ .composecontainer { 
+  margin: auto;
+  /* margin-top: 100px; */
+  margin-left:auto;
+  margin-right:auto;
+  background-color: rgb(207, 207, 207);
+  width: 80%;
+  border: 1px solid grey;
+  border-radius: 25px;
+  padding: 10px;
+  }
+  
+  /*class*/
+ .tweetcontainer { 
+   margin:auto;
+   margin-left:auto;
+   margin-right:auto;
+   /* background-color: rgb(207, 207, 207); */
+   width: 80%;
+   border: 1px solid grey;
+
+   
+   /* border-radius: 25px; */
+   /* padding: 10px; */
+   border-radius: 15px 15px 15px 15px; */
+  
+   /* border-radius: 15px; */
+  }
+
+
+  .tweetcontainer:hover{
+    border: 2px solid black;
+ 
+
+  }
+textarea {
+  width: 100%;
+  height: 50px;
+}
+
+/*ID*/
+#avatar{
+  height: 80px;
+  width: 80px;
+  float: left;
+  border: 1px solid grey;
+  border-radius: 25px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+#name{
+  font-weight: bold;
+  font-size: 30px;
+  padding-left: 20%;
+  margin-top: 5px;
+}
+
+#username{
+  float: right;
+  font-size: 15px;
+  padding-right: 15%;
+  margin-top: 5px;
+  margin-left: 5px;
+
+}
+
+
+
+
+
+header{
+  background-color: rgb(241, 241, 241);
+  /* border: 1px solid grey;
+  border-radius: 15px 15px 0px 0px; */
+  border-radius: 15px 15px 0px 0px;
+  border-bottom: 1px solid grey;
+  padding: 1px;
+ 
+
+ 
+}
+
+
+
+
+
+footer{
+  background-color: rgb(241, 241, 241);
+  border-radius: 0px 0px 15px 15px;
+  border-top: 1px solid grey;
+  padding: 2px;
+}
+
+
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
