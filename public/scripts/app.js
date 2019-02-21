@@ -6,10 +6,13 @@
 
 $(document).ready(function () {
 
+    $('#error-text').hide();
+    $('#error-140').hide();
+
     const createTweetElement = function (tweetObj) {
         /*retrieve the form information*/
         const element = `<article>
-        <br>
+      
         <header>
         <img id="avatar" src="/images/avatar.png">
         <div id="name">   ${tweetObj.user.name}
@@ -25,12 +28,16 @@ $(document).ready(function () {
         <footer>
         <p>${tweetObj.createdat}</p>               
         </footer>
-        </article>`;
+        </article>
+        <br>`;
         //create a var for list container holding tweets
         const $listOfTweets = $('.tweetcontainer');
         //add the tweets //keyword here is append 
         $listOfTweets.prepend(element);
         //return the tweet object
+
+        //error messages
+
         return element;
     }
 
@@ -79,10 +86,10 @@ $(document).ready(function () {
 
 
       if(len == "" || null) {
-        alert("Please enter a message");
+        $('#error-text').fadeIn();
       }
       else if(len > 140){
-          alert("Please enter 140 characters or less");
+        $('#error-140').fadeIn();
       } else {
         $.ajax({
                 method: "POST",
@@ -91,11 +98,14 @@ $(document).ready(function () {
             })
             .done(function (loadTweets) {
                 console.log('Success: ', loadTweets);
+                $('#error-text').fadeOut();
+            $('#error-140').fadeOut();
+            $('#tweet_textarea').val(""); 
             })
+            loadTweets()
         }
-        loadTweets()
-        $('#tweet_textarea').val("");
-    
+        // $('#error-text').hide();
+        // $('#error-140').hide();
     });
 
 });

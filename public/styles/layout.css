@@ -38,6 +38,7 @@ main {
 
 /*class*/
  .composecontainer { 
+  
   margin: auto;
   /* margin-top: 100px; */
   margin-left:auto;
@@ -67,7 +68,7 @@ main {
   }
 
 
-  .tweetcontainer:hover{
+  article:hover{
     border: 2px solid black;
  
 
@@ -104,7 +105,11 @@ textarea {
 
 }
 
+article {
+  border: 1px solid grey;
+  border-radius: 15px;
 
+}
 
 
 
@@ -129,6 +134,16 @@ footer{
   border-radius: 0px 0px 15px 15px;
   border-top: 1px solid grey;
   padding: 2px;
+}
+
+p#error-text{
+  color: red;
+  
+}
+
+p#error-104{
+  color: red;
+  
 }
 
 

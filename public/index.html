@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/> -->
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -24,13 +25,17 @@
     <script type="text/javascript" src="/scripts/app.js"></script>
 
 
+    <script>
+        $(document).ready(function(){
+          $("#compose-button").click(function(){
+            $(".composecontainer").fadeToggle() //fadeout
+             $('#tweet_textarea').focus()
+          });
+        });
+        </script>
 
-
-
-<script> 
   
 
-  </script>
 
   </head>
 
@@ -38,12 +43,21 @@
 
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
+   
         <img class="logo" src="/images/bird.png">
-        <span class="header">Tweeter</span>          
-    </nav>
+        <span class="header">Tweeter</span>  
+        
+        <button id="compose-button">Compose</button>     
+    
+      </nav>
+
+      
+
+   
 
     <!-- Page-specific (main) content here -->
     <main>
+    
 
         <div class="composecontainer">
         <section class="new-tweet">
@@ -52,9 +66,11 @@
             <!-- <form method="POST" action="/tweets">  -->
             <form id="new-tweet-form" action="/tweets"> 
               <!-- Ids are for selecting elements, class are for styling  -->
-              <textarea class="tweet-text" id="tweet_textarea" name="text" placeholder="What are you humming about?"></textarea>
+              <textarea class="tweet-text" id="tweet_textarea" name="text" placeholder="What are you humming about?" autofocus></textarea>
               <input id="sendTweet" type="submit" value="Tweet">
               <span id="counter">140</span>
+              <p id="error-text">Please enter text!</p>
+              <p id="error-140">Please use 140 characters or less!</p>
             </form>
           </section>
         </div>
@@ -63,11 +79,10 @@
 
          
         <div class="tweetcontainer">
-          <!-- Tweets are now being rendered in app.js -->
-        </article>
+       
 
 
-        </div>
+       
 
     </main>
 
