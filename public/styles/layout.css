@@ -33,7 +33,7 @@ main {
   margin-top: 0;
   background-color: white;
   width: 40%;
-  height: 1000px;
+  height: 100%;
 }
 
 /*class*/
@@ -56,9 +56,9 @@ main {
    margin-right:auto;
    /* background-color: rgb(207, 207, 207); */
    width: 80%;
-   border: 1px solid grey;
+   /* border: 1px solid grey; */
 
-   
+   /* border: 1px solid grey; */
    /* border-radius: 25px; */
    /* padding: 10px; */
    border-radius: 15px 15px 15px 15px; */

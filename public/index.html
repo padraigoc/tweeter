@@ -23,6 +23,15 @@
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
 
+
+
+
+
+<script> 
+  
+
+  </script>
+
   </head>
 
   <body>
@@ -40,10 +49,11 @@
         <section class="new-tweet">
             <h2>Compose Tweet</h2>
             <hr>
-            <form method="POST" action="/tweets">
+            <!-- <form method="POST" action="/tweets">  -->
+            <form id="new-tweet-form" action="/tweets"> 
               <!-- Ids are for selecting elements, class are for styling  -->
               <textarea class="tweet-text" id="tweet_textarea" name="text" placeholder="What are you humming about?"></textarea>
-              <input type="submit" value="Tweet">
+              <input id="sendTweet" type="submit" value="Tweet">
               <span id="counter">140</span>
             </form>
           </section>
@@ -51,32 +61,10 @@
 
         <br>
 
+         
         <div class="tweetcontainer">
-          <article>
-              <header>
-                  <img id="avatar" src="/images/avatar.png">
-
-                  <div id="name">Patrick O'Connor
-
-                  <span style="float:right; font-size: 15px; font-weight: normal; padding-top: 10px; margin-right: 10px;"> @patrick </span>
-                
-                  </div>
-                            
-                <br> 
-                <br>
-                <br>
-             
-              </header>
-              <p>
-              My tweet goes here
-              </p>
-
-              <footer>
-                <p>10 days ago</p>
-                  
-              </footer>
-
-          </article>
+          <!-- Tweets are now being rendered in app.js -->
+        </article>
 
 
         </div>
