@@ -26,19 +26,20 @@ $(document).ready(function () {
         ${tweetObj.content.text}
         </p>
         <footer>
-        <p>${tweetObj.createdat}</p>               
+        <p>${renderDate(tweetObj.created_at)}</p>               
         </footer>
         </article>
         <br>`;
         //create a var for list container holding tweets
         const $listOfTweets = $('.tweetcontainer');
-        //add the tweets //keyword here is append 
+        //add the tweets //keyword here is prepend  
         $listOfTweets.prepend(element);
-        //return the tweet object
-
-        //error messages
-
         return element;
+    }
+
+    function renderDate(val){
+    var d = new Date(val);
+    return d; 
     }
 
 
@@ -63,19 +64,16 @@ $(document).ready(function () {
                 url: "/tweets",
             })
             .done(function (tweets) {
-
                 const $listOfTweets = $('.tweetcontainer');
                 $listOfTweets.empty(); 
                 renderTweets(tweets);
-
             })
-
-
     }
 
     loadTweets()
 
-    //Event Handler 
+
+    //create tweet
     var $button = $('#sendTweet');
     $button.on('click', function (event) {
         console.log('Button clicked, performing ajax call...');
@@ -83,7 +81,6 @@ $(document).ready(function () {
         //use jquery for text area and .val() get.length 
 
       const len = $('#tweet_textarea').val().length;
-
 
       if(len == "" || null) {
         $('#error-text').fadeIn();
@@ -104,8 +101,6 @@ $(document).ready(function () {
             })
             loadTweets()
         }
-        // $('#error-text').hide();
-        // $('#error-140').hide();
     });
 
 });
