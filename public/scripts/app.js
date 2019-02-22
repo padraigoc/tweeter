@@ -122,6 +122,7 @@
             $('#error-text').fadeIn();
         }
         else if(len > 140){
+            $('#error-text').hide();
             $('#error-140').fadeIn();
         } else {
             $.ajax({
@@ -136,7 +137,6 @@
             $('#tweet_textarea').val(""); 
             loadTweets()
             $('#counter').text("140"); //reset character count
-
             })
             
         }
