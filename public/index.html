@@ -24,48 +24,24 @@
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
 
-
-    <script>
-        $(document).ready(function(){
-          $("#compose-button").click(function(){
-            $(".composecontainer").fadeToggle() //fadeout
-             $('#tweet_textarea').focus()
-          });
-        });
-        </script>
-
-  
-
-
   </head>
-
   <body>
 
     <!-- Top nav bar (fixed) -->
-    <nav id="nav-bar">
-   
+    <nav id="nav-bar"> 
         <img class="logo" src="/images/bird.png">
-        <span class="header">Tweeter</span>  
-        
-        <button id="compose-button">Compose</button>     
-    
-      </nav>
-
-      
-
-   
+        <span class="header">Tweeter</span>       
+        <button id="compose-button">Compose</button>    
+    </nav>
 
     <!-- Page-specific (main) content here -->
     <main>
-    
-
         <div class="composecontainer">
         <section class="new-tweet">
             <h2>Compose Tweet</h2>
             <hr>
             <!-- <form method="POST" action="/tweets">  -->
             <form id="new-tweet-form" action="/tweets"> 
-              <!-- Ids are for selecting elements, class are for styling  -->
               <textarea class="tweet-text" id="tweet_textarea" name="text" placeholder="What are you humming about?" autofocus></textarea>
               <input id="sendTweet" type="submit" value="Tweet">
               <span id="counter">140</span>
@@ -74,17 +50,8 @@
             </form>
           </section>
         </div>
-
-        <br>
-
-         
-        <div class="tweetcontainer">
-       
-
-
-       
-
+        <br>         
+        <div class="tweetcontainer"></div>
     </main>
-
   </body>
 </html>
