@@ -3,6 +3,8 @@
  */
  $(document).ready(function () {
 
+     
+
     //remove all error messaging when page loads
      $('#error-text').hide();
      $('#error-140').hide();
@@ -132,18 +134,28 @@
                 $('#error-text').fadeOut();
             $('#error-140').fadeOut();
             $('#tweet_textarea').val(""); 
-                loadTweets()
+            loadTweets()
+            $('#counter').text("140"); //reset character count
+
             })
             
         }
     });
 
+
+    // document.getElementById("composecontainer").style.visibility = "hidden"; 
+
+
     //Compose button which fades in/out compose message box
-    $(document).ready(function(){
+
+        $('.composecontainer').hide(); //hide compose box on load 
+        $(".composecontainer").daf
         $("#compose-button").click(function(){
           $(".composecontainer").fadeToggle() //fadeout
            $('#tweet_textarea').focus()
         });
-      });
+     
+
+  
 
 });
